@@ -39,5 +39,22 @@ print "6. What was the least-requested file?";
 print "7. All of the above questions";
 
 #user enters a number for their option
+question =  input ('Enter the number: ')
 
 #condition statement to decide which answer to display
+if(input == 1):
+    st= total_requests " requests were made in the time period."
+  elif (input == 2):
+  	st= requests 
+  elif (input == 3):
+  	st= xxxx_status
+  elif (input == 4):
+  	st= xxx_status
+  elif (input == 5):
+  	st= most_requested
+  elif (input == 6):
+  	st= least_requested
+  elif (input == 7):
+  	st= total_requests " requests were made in the time period.", requests, xxxx_status, xxx_status, most_requested, least_requested				
+
+ print st	
