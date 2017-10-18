@@ -39,6 +39,7 @@ print "6. What was the least-requested file?";
 print "7. All of the above questions";
 
 #user enters a number for their option
+question =  input ('Enter the number: ')
 
 #condition statement to decide which answer to display
 if(input == 1):
