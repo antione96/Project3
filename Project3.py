@@ -26,6 +26,9 @@ if f.mode == 'r':
 	contents = f.read()
 	print contents
 
+# The regex
+regex = re.compile(".*\[(.*) \-[0-9]{4}\] \"([A-Z]+) (.+?)( HTTP.*\"|\") ([2-5]0[0-9]) .*")
+
 #Solving the questions
 f = open("http_access_log.dms", "r")
 count = 0
