@@ -47,14 +47,14 @@ if(input == 1):
   elif (input == 2):
   	st= requests 
   elif (input == 3):
-  	st= 4xx_status
+  	st= xxxx_status
   elif (input == 4):
-  	st= 3xx_status
+  	st= xxx_status
   elif (input == 5):
   	st= most_requested
   elif (input == 6):
   	st= least_requested
   elif (input == 7):
-  	st= total_requests " requests were made in the time period.", requests, 4xx_status, 3xx_status, most_requested, least_requested				
+  	st= total_requests " requests were made in the time period.", requests, xxxx_status, xxx_status, most_requested, least_requested				
 
  print st	
