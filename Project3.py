@@ -9,7 +9,7 @@ from datetime import time
 from datetime import datetime
 
 def main():
-	f = open("logfile.html", "r")
+	f = open("http_access_log", "r")
 	if f.mode == 'r':
 		contents = f.read()
 		print contents
