@@ -12,7 +12,7 @@ def main():
 	f = open("http_access_log", "r")
 	if f.mode == 'r':
 		contents = f.read()
-		print contents
+		parser.feed(contents)
 
 
 
