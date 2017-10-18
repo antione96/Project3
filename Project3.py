@@ -41,3 +41,19 @@ print "7. All of the above questions";
 #user enters a number for their option
 
 #condition statement to decide which answer to display
+if(input == 1):
+    st= total_requests " requests were made in the time period."
+  elif (input == 2):
+  	st= requests 
+  elif (input == 3):
+  	st= 4xx_status
+  elif (input == 4):
+  	st= 3xx_status
+  elif (input == 5):
+  	st= most_requested
+  elif (input == 6):
+  	st= least_requested
+  elif (input == 7):
+  	st= total_requests " requests were made in the time period.", requests, 4xx_status, 3xx_status, most_requested, least_requested				
+
+ print st	
