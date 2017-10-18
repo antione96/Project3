@@ -4,15 +4,27 @@
 # This python program will check a log file (https://s3.amazonaws.com/tcmg412-fall2016/http_access_log) and answer certain questions 
 
 import urllib2
-from datetime import date
-from datetime import time
+import re
+import sys
 from datetime import datetime
 
-def main():
-	f = open("logfile.html", "r")
-	if f.mode == 'r':
-		contents = f.read()
-		print contents
+remote_url = 'https://s3.amazonaws.com/tcmg412-fall2016/http_access_log'
+local_file = 'http_access_log.dms'
+log_path = 'logs/'
+
+
+print "\Downloading log file from url..."
+response = urllib2.urlopen(remote_url)
+with open(local_file, "wb") as local:
+	local.write(response.read())
+print "File retrieved and saved (%s) \n\n" % local_file
+
+
+
+f = open("http_access_log.dms", "r")
+if f.mode == 'r':
+	contents = f.read()
+	print contents
 
 
 
