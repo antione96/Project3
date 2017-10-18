@@ -26,7 +26,31 @@ if f.mode == 'r':
 	contents = f.read()
 	print contents
 
+# The regex
+regex = re.compile(".*\[(.*) \-[0-9]{4}\] \"([A-Z]+) (.+?)( HTTP.*\"|\") ([2-5]0[0-9]) .*")
 
+#Solving the questions
+f = open("http_access_log.dms", "r")
+count = 0
+allLine = []
+by_weekday = {0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+by_month = {}
+
+	
+for line in f:
+	count += 1
+	allLine.append(line)
+	split_data = line.split()
+
+	try:
+		str_date = line.split () [3][1:].split(':')[0]
+	except:
+		pass
+	date = datetime.strptime( str_date, "%d/%b/%Y" )
+	by_weekday[date.weekday()] +=1		
+		
+	if count > by_weekday:
+		print by_weekday
 
 # Displays options for you to pick from
 print "Which question would you like to know the answer to?";
@@ -38,7 +62,7 @@ print "5. What was the most-requested file?";
 print "6. What was the least-requested file?";
 print "7. All of the above questions";
 
-#user enters a number for their option
+# User enters a number for their option
 question =  input ('Enter the number: ')
 
 #condition statement to decide which answer to display
